@@ -1,4 +1,23 @@
+model Message {
+    fields {
+        message Text
+    }
+
+    actions {
+        create createMessage() with (message)
+        list listMessages()
+        update updateMessage(id)
+        get getMessage(id)
+        delete deleteMessage(id)
+    }
+
+    @permission(
+        actions: [create, list, get, update, delete],
+        expression: true
+    )
+}
+
 job Waywo {
-    @schedule("15 14 * * *")
+    @schedule("15 14 * * 1-5")
     @permission(expression: true)
 }

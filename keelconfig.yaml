@@ -1,13 +1,10 @@
-# Visit https://keel.notaku.site/documentation/environment-variables-and-secrets for more
-# information about environment variables and secrets
-environment:
-  default:
-  development:
-  test:
-  staging:
-  production:
+# Visit https://docs.keel.so/authentication/getting-started for more information about authentication
+auth:
 
+# Visit https://docs.keel.so/envvars for more information about environment variables
+environment:
+
+# Visit https://docs.keel.so/secrets for more information about secrets
 secrets:
   - name: SLACK_TOKEN
-  - name: SLACK_URL
   - name: CHANNEL_ID
