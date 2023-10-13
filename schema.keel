@@ -1,0 +1,4 @@
+job Waywo {
+    @schedule("15 14 * * *")
+    @permission(expression: true)
+}

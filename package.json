@@ -1,0 +1,23 @@
+{
+  "name": "keel-hub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/web-api": "^6.9.0",
+    "@teamkeel/functions-runtime": "^0.368.0",
+    "@teamkeel/testing-runtime": "^0.368.0",
+    "@types/node": "^18.11.18",
+    "kysely": "^0.23.4",
+    "node-fetch": "^3.3.0",
+    "tsx": "^3.12.6",
+    "typescript": "^4.9.4",
+    "vitest": "^0.27.2"
+  }
+}
