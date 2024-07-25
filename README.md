@@ -8,6 +8,8 @@
 8. Select the project name. On the Almost there page click “Create project”
 9. You’ll get a confirmation page. Now click “Open project”
 10. The project will now build and do an initial commit. This can take a minute or two! 
+![Screenshot 2024-07-25 at 18 33 16](https://github.com/user-attachments/assets/5d0ba3c5-799f-49a2-a614-05f7177a7c9a)
+![Screenshot 2024-07-25 at 18 33 25](https://github.com/user-attachments/assets/23365fa9-3faf-4920-93f3-a50792c35b76)
 
 
 Now let’s set up the Slack App:
@@ -25,6 +27,7 @@ Now let’s set up the Slack App:
    - chat:write
 8. When you’ve added the four OAuth scopes, scroll back to the top and click “Install to Workspace”
 9. On the permission to access page, click “Allow”. **You should now see a Bot User OAuth Token that you can copy**
+![Screenshot 2024-07-25 at 18 30 44](https://github.com/user-attachments/assets/b0ec68fe-fb46-44b6-9635-56377978c202)
 
 
 Now let’s set up the secrets in the Keel app - this is what connects Keel to Slack! 
@@ -36,6 +39,7 @@ Now let’s set up the secrets in the Keel app - this is what connects Keel to S
 5. Copy the channel ID from your Slack channel. In Secrets, add “CHANNEL_ID” as the Key and paste the channel ID in the Value
 6. Hit save to save your two secrets
 7. Go to the build tab and click Deploy on your latest build to redeploy your project
+![Screenshot 2024-07-25 at 18 32 21](https://github.com/user-attachments/assets/70268dc3-ac8c-4155-85e2-50e01b47dc70)
 
 
 The final step is to personalise your WAYWO with prompts - the messages it’ll send to your channel to ask people what they’re working on. 
@@ -49,3 +53,4 @@ The final step is to personalise your WAYWO with prompts - the messages it’ll 
 7. Click the “Run” button to test it’s working
 8. Go and check your Slack channel where you should see the result! 
 9. The WAYWO will run every week day at 2:15pm unless you stop it.
+![Screenshot 2024-07-25 at 18 32 45](https://github.com/user-attachments/assets/2292385c-2399-4113-a881-21b50b2369bf)
