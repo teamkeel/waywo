@@ -22,12 +22,9 @@ Now let’s set up the Slack App:
    - groups:read
    - im:read
    - mpim:read
+   - chat:write
 8. When you’ve added the four OAuth scopes, scroll back to the top and click “Install to Workspace”
 9. On the permission to access page, click “Allow”. **You should now see a Bot User OAuth Token that you can copy**
-10. Go to the Incoming Webhooks section
-11. Toggle the Activate Incoming Webhooks button to “On”
-12. Click “Add New Webhook to Workspace”
-13. On the permission to access page, choose the Slack channel you’d like to add your WAYWO bot to from the dropdown, and click “Allow”. **You should now see a Webhook URL that you can copy** 
 
 
 Now let’s set up the secrets in the Keel app - this is what connects Keel to Slack! 
@@ -35,13 +32,10 @@ Now let’s set up the secrets in the Keel app - this is what connects Keel to S
 1. In the Keel console, choose “Secrets” under the left hand Configure menu
 2. Click “Add secret” 
 3. Copy the OAuth token you just made in the Slack API. In Secrets, add “SLACK_TOKEN” as the Key and paste your token in the Value
-4. Click “Add secret”
-5. Copy the Webhook URL you just made in the Slack API. In Secrets, add “SLACK_URL” as the Key and paste the URL in the Value
-6. Click “Add secret”
-7. For the final secret, you need to find the Channel ID for the Slack channel that you’re adding your WAYWO to. In Slack, go to the channel you’ve chosen and open up the channel information. You’ll find the channel ID at the bottom of the information window, with a button to copy it
-8. Copy the channel ID from your Slack channel. In Secrets, add “CHANNEL_ID” as the Key and paste the channel ID in the Value
-9. Hit save to save your three secrets
-10. **Do an empty commit???**
+4. For the second secret, you need to find the Channel ID for the Slack channel that you’re adding your WAYWO to. In Slack, go to the channel you’ve chosen and open up the channel information. You’ll find the channel ID at the bottom of the information window, with a button to copy it
+5. Copy the channel ID from your Slack channel. In Secrets, add “CHANNEL_ID” as the Key and paste the channel ID in the Value
+6. Hit save to save your two secrets
+7. Go to the build tab and click Deploy on your latest build to redeploy your project
 
 
 The final step is to personalise your WAYWO with prompts - the messages it’ll send to your channel to ask people what they’re working on. 
