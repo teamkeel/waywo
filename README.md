@@ -1,3 +1,5 @@
+
+### Create a new repo and create your Keel project
 1. Click the “Use this template” button and choose “Create a new repository” from the dropdown
 2. In “Create a new repository” page, choose your desired Owner and give the new repository a name (e.g. “WAYWO”). Leave “Include all branches” unticked
 3. Choose whether it should be public or private and click “Create repository”
@@ -12,8 +14,7 @@
 ![Screenshot 2024-07-25 at 18 33 25](https://github.com/user-attachments/assets/23365fa9-3faf-4920-93f3-a50792c35b76)
 
 
-Now let’s set up the Slack App:
-
+### Set-up a new Slack App
 1. In the [Slack API](https://api.slack.com/apps/): click “Create new app” and then the “From scratch” option
 2. Give the app a name it and select the Slack workspace where you want it to be. If you don’t see your workspace, choose “Sign into a different workspace” to connect it
 3. Click “Create App”
@@ -30,8 +31,7 @@ Now let’s set up the Slack App:
 ![Screenshot 2024-07-25 at 18 30 44](https://github.com/user-attachments/assets/b0ec68fe-fb46-44b6-9635-56377978c202)
 
 
-Now let’s set up the secrets in the Keel app - this is what connects Keel to Slack! 
-
+### Add the secrets to your Keel app
 1. In the Keel console, choose “Secrets” under the left hand Configure menu
 2. Click “Add secret” 
 3. Copy the OAuth token you just made in the Slack API. In Secrets, add “SLACK_TOKEN” as the Key and paste your token in the Value
@@ -42,8 +42,7 @@ Now let’s set up the secrets in the Keel app - this is what connects Keel to S
 ![Screenshot 2024-07-25 at 18 32 21](https://github.com/user-attachments/assets/70268dc3-ac8c-4155-85e2-50e01b47dc70)
 
 
-The final step is to personalise your WAYWO with prompts - the messages it’ll send to your channel to ask people what they’re working on. 
-
+### Personalise your WAYWO with prompts - the messages it’ll send to your channel to ask people what they’re working on. 
 1. Go to the All Tools section in Keel
 2. Click “Add message”
 3. Click the + button and type in your prompt. The WAYWO bot will automatically add “Hey @[name] at the start of your message, and it’ll choose a message at random each time it runs
