@@ -20,7 +20,7 @@
 3. Click “Create App”
 4. It’ll take you to the Basic Information page
 5. Go to the OAuth & Permissions section
-6. Under Scopes and Bot Token Scopes click “Add an OAuth Scope” each time to add the following four scopes:
+6. Under Scopes and Bot Token Scopes click “Add an OAuth Scope” each time to add the following five scopes:
    - channels:read
    - groups:read
    - im:read
@@ -37,19 +37,20 @@
 3. Copy the OAuth token you just made in the Slack API. In Secrets, add “SLACK_TOKEN” as the Key and paste your token in the Value
 4. For the second secret, you need to find the Channel ID for the Slack channel that you’re adding your WAYWO to. In Slack, go to the channel you’ve chosen and open up the channel information. You’ll find the channel ID at the bottom of the information window, with a button to copy it
 5. Copy the channel ID from your Slack channel. In Secrets, add “CHANNEL_ID” as the Key and paste the channel ID in the Value
-6. Hit save to save your two secrets
-7. Go to the build tab and click Deploy on your latest build to redeploy your project
+6. Hit Save to save your two secrets
+7. Go to the Overview tab and in your initial commit click the three dots next to the green Live bar. Click "Redeploy" from the drop down to redeploy your project
 ![Screenshot 2024-07-25 at 18 32 21](https://github.com/user-attachments/assets/70268dc3-ac8c-4155-85e2-50e01b47dc70)
 
 
 ### Personalise your WAYWO with prompts - the messages it’ll send to your channel to ask people what they’re working on. 
 1. Go to the All Tools section in Keel
-2. Click “Add message”
-3. Click the + button and type in your prompt. The WAYWO bot will automatically add “Hey @[name] at the start of your message, and it’ll choose a message at random each time it runs
-4. Keep clicking the + button to add more messages, until you’re happy
-5. Click “Create” to add all your messages
-6. In Jobs, click on the Waywo entry
-7. Click the “Run” button to test it’s working
-8. Go and check your Slack channel where you should see the result! 
-9. The WAYWO will run every week day at 2:15pm unless you stop it.
+2. Click “Create message”
+3. Type your prompt in the "Message" box. The WAYWO bot will automatically add “Hey @[name] at the start of your message, and it’ll choose a message at random each time it runs
+4. Click "Create" to add your message. You'll be taken to a new page showing your message has been create
+5. Click “Create” to add another message. Follow the steps above to keep adding more until you're happy
+6. To see a list of all your messages, go to the All Tools section and click "List messages"
+7. In Jobs, click on the Waywo entry
+8. Click the “Run” button to test it’s working
+9. Go and check your Slack channel where you should see the result! 
+10. The WAYWO will run every week day at 2:15pm unless you stop it.
 ![Screenshot 2024-07-25 at 18 32 45](https://github.com/user-attachments/assets/2292385c-2399-4113-a881-21b50b2369bf)
