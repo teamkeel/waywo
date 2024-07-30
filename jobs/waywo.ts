@@ -26,7 +26,13 @@ export default Waywo(async (ctx) => {
 
   const members = await slack.conversations.members({
     channel: CHANNEL_ID,
-  });
+  }).catch((error) => {
+      if (error.code === ErrorCode.PlatformError) {
+        // Log the extra information in a slack error error
+        console.log("failed to list members", error.data);
+      } 
+      throw error;
+    });
 
   const newCtx: ContextWithSlack = {
     ...ctx,
@@ -50,6 +56,11 @@ export default Waywo(async (ctx) => {
   for (const member of members.members) {
     const presence = await slack.users.getPresence({
       user: member,
+    }).catch((error) => {
+      if (error.code === ErrorCode.PlatformError) {
+        console.log("failed to get user presense", error.data);
+      } 
+      throw error;
     });
 
     if (presence.presence == "active") {
@@ -95,9 +106,8 @@ const sendToSlack = async (ctx: ContextWithSlack, message: string) => {
     })
     .catch((error) => {
       if (error.code === ErrorCode.PlatformError) {
-        // Log the extra information in a slack error error
-        console.log(error.data);
-      }
+        console.log("failed to send", error.data);
+      } 
       throw error;
     });
 };
