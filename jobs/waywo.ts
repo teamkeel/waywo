@@ -1,5 +1,5 @@
 import { Waywo, JobContextAPI, models } from "@teamkeel/sdk";
-import { WebClient } from "@slack/web-api";
+import { ErrorCode, WebClient } from "@slack/web-api";
 import { randomInt } from "crypto";
 
 type ContextWithSlack = JobContextAPI & {
@@ -86,10 +86,18 @@ const sendRandomMessage = async (ctx: ContextWithSlack, user: string) => {
 };
 
 const sendToSlack = async (ctx: ContextWithSlack, message: string) => {
-  return ctx.slack.chat.postMessage({
-    channel: ctx.secrets.CHANNEL_ID,
-    text: message,
-    unfurl_links: false,
-    unfurl_media: false,
-  });
+  return ctx.slack.chat
+    .postMessage({
+      channel: ctx.secrets.CHANNEL_ID,
+      text: message,
+      unfurl_links: false,
+      unfurl_media: false,
+    })
+    .catch((error) => {
+      if (error.code === ErrorCode.PlatformError) {
+        // Log the extra information in a slack error error
+        console.log(error.data);
+      }
+      throw error;
+    });
 };
