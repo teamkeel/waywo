@@ -20,12 +20,11 @@
 3. Click “Create App”
 4. It’ll take you to the Basic Information page
 5. Go to the OAuth & Permissions section
-6. Under Scopes and Bot Token Scopes click “Add an OAuth Scope” each time to add the following five scopes:
-   - channels:read
-   - groups:read
-   - im:read
-   - mpim:read
+6. Under Scopes and Bot Token Scopes click “Add an OAuth Scope” each time to add the following four scopes:
    - chat:write
+   - chat:write.customize
+   - incoming-webhook
+   - users:read 
 8. When you’ve added the four OAuth scopes, scroll back to the top and click “Install to Workspace”
 9. On the permission to access page, click “Allow”. **You should now see a Bot User OAuth Token that you can copy**
 ![Screenshot 2024-07-25 at 18 30 44](https://github.com/user-attachments/assets/b0ec68fe-fb46-44b6-9635-56377978c202)
@@ -35,10 +34,11 @@
 1. In the Keel console, choose “Secrets” under the left hand Configure menu
 2. Click “Add secret” 
 3. Copy the OAuth token you just made in the Slack API. In Secrets, add “SLACK_TOKEN” as the Key and paste your token in the Value
-4. For the second secret, you need to find the Channel ID for the Slack channel that you’re adding your WAYWO to. In Slack, go to the channel you’ve chosen and open up the channel information. You’ll find the channel ID at the bottom of the information window, with a button to copy it
-5. Copy the channel ID from your Slack channel. In Secrets, add “CHANNEL_ID” as the Key and paste the channel ID in the Value
-6. Hit Save to save your two secrets
-7. Go to the Overview tab and in your initial commit click the three dots next to the green Live bar. Click "Redeploy" from the drop down to redeploy your project
+4. For the second secret, you need to find the Channel ID for the Slack channel that you’re adding your WAYWO to. You might want to make a new channel for this, and make sure everyone in your team is in that channel as these are the people your WAYWO bot will choose from to.
+5. In Slack, go to the channel you’ve chosen and open up the channel information. You’ll find the channel ID at the bottom of the information window, with a button to copy it. 
+6. Copy the channel ID from your Slack channel. In Secrets, add “CHANNEL_ID” as the Key and paste the channel ID in the Value
+7. Hit Save to save your two secrets
+8. Go to the Overview tab and in your initial commit click the three dots next to the green Live bar. Click "Redeploy" from the drop down to redeploy your project
 ![Screenshot 2024-07-25 at 18 32 21](https://github.com/user-attachments/assets/70268dc3-ac8c-4155-85e2-50e01b47dc70)
 
 
