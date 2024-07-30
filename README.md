@@ -21,9 +21,9 @@
 4. It’ll take you to the Basic Information page
 5. Go to the OAuth & Permissions section
 6. Under Scopes and Bot Token Scopes click “Add an OAuth Scope” each time to add the following four scopes:
+   - channels:read 
    - chat:write
    - chat:write.customize
-   - incoming-webhook
    - users:read 
 8. When you’ve added the four OAuth scopes, scroll back to the top and click “Install to Workspace”
 9. On the permission to access page, click “Allow”. **You should now see a Bot User OAuth Token that you can copy**
@@ -42,10 +42,16 @@
 ![Screenshot 2024-07-25 at 18 32 21](https://github.com/user-attachments/assets/70268dc3-ac8c-4155-85e2-50e01b47dc70)
 
 
-### Personalise your WAYWO with prompts - the messages it’ll send to your channel to ask people what they’re working on. 
-1. Go to the All Tools section in Keel
+### Add your WAYWO to your Slack channel
+1. In Slack, go to the Slack channel you've chosen your WAYWO to be in
+2. Type "/invite @[yourWAYWOname]" in the message box. Press enter
+3. Your WAYWO should send a message to the channel confirming that it's been added
+
+
+### Personalise your WAYWO with prompts - the messages it’ll send to your channel to ask people what they’re working on
+1. Go to the All Tools section in the Keel console
 2. Click “Create message”
-3. Type your prompt in the "Message" box. The WAYWO bot will automatically add “Hey @[name] at the start of your message, and it’ll choose a message at random each time it runs
+3. Type your prompt in the "Message" box. The WAYWO bot will automatically add “Hey @[name]" at the start of your message, and it’ll choose a message at random each time it runs
 4. Click "Create" to add your message. You'll be taken to a new page showing your message has been create
 5. Click “Create” to add another message. Follow the steps above to keep adding more until you're happy
 6. To see a list of all your messages, go to the All Tools section and click "List messages"
