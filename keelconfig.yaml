@@ -8,3 +8,5 @@ environment:
 secrets:
   - name: SLACK_TOKEN
   - name: CHANNEL_ID
+  - name: OPENAI_KEY
+  - name: PLAIN_API_KEY

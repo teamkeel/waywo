@@ -17,6 +17,20 @@ model Message {
     )
 }
 
+model Spam {
+    fields {
+        from Text
+        message Text
+        flagged Boolean
+    }
+
+    actions {
+        write plain(Any) returns (Any) {
+            @permission(expression: true)
+        }
+    }
+}
+
 job Waywo {
     @schedule("15 14 * * 1-5")
     @permission(expression: true)
